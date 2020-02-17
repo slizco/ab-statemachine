@@ -1,0 +1,17 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+    random
+    Generates a random number between 0 and 99, inclusive
+Parameters:
+Globals:
+    Function:
+        Timeout: 10
+Resources:
+    RandomFn:
+        Type: AWS::Serverless::Function 
+        Properties:
+            CodeUri: ./
+            Handler: handler.Handler.handle
+            Runtime: ruby2.5
+

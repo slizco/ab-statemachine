@@ -1,15 +1,19 @@
-#random
+# random
+
 Lambda function that simply outputs a random number between 0 and 99, inclusive
 
 ## dependencies
+
 - ruby
 - Docker
 - AWS SAM
 
 ## build
+
 `aws sam build --use-container`
 
 ## test
+
 `aws sam local invoke --event event.json --region us-east-1`
 The output should show a number between 0 and 99:
 ```

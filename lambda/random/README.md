@@ -31,3 +31,9 @@ REPORT RequestId: 30e9bccd-7d44-1d12-9e36-b051b7c4cc7f	Init Duration: 126.66 ms	
 
 48
 ```
+## package
+`sam package --s3-bucket slizco-sam-artifacts --output-template-file template.yaml.out`
+
+## deploy
+`sam deploy --template-file template.yaml.out --stack-name slizco-random-lambda --region us-east-1 --capabilities CAPABILITY_IAMi`
+Note that in order to get the above working, you may have to open up the output template file and remove the `Parameters: null` field because SAM is silly.

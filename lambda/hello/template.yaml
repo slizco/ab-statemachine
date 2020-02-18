@@ -1,0 +1,16 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+    hello
+    Outputs a hello message
+Globals:
+    Function:
+        Timeout: 10
+Resources:
+    HelloFn:
+        Type: AWS::Serverless::Function
+        Properties:
+            CodeUri: ./
+            Handler: handler.Handler.handle
+            Runtime: ruby2.5
+
